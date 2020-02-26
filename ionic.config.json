@@ -1,0 +1,7 @@
+{
+  "name": "Ionic-fb-wilfred-tester",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
