@@ -24,4 +24,24 @@ export class AppComponent {
       this.splashScreen.hide();
     });
   }
+
+  public selectedIndex = 0;
+  public appPages = [
+    {
+      title: 'About',
+      url: '/tabs/tab1',
+      icon: 'menu'
+    },
+    {
+      title: 'Outbox',
+      url: '/tabs/tab2',
+      icon: 'paper-plane'
+    },
+    {
+      title: 'Favorites',
+      url: '/tabs/tab3',
+      icon: 'person-circle'
+    },
+
+  ];
 }
