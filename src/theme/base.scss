@@ -48,3 +48,55 @@
     right: 1rem;
   }
 }
+
+
+app-tabs {
+  ion-tab-bar {
+    ion-tab-button {
+      max-width: 10rem;
+      max-height: 2.5rem;
+      margin: 10px;
+      border-top-left-radius:  .5rem;
+      border-top-right-radius: .5rem;
+      --color: white;
+      --width: 1rem;
+      --background: #a0bbc5;
+
+      .button-native {
+        color: white !important;
+        --color: white !important;
+      }
+      .button-inner {
+        --color: white !important;
+        color: white !important;
+      }
+
+      &.tab-selected {
+        --background: #63657a;
+        --color: var(--ion-color-success-contrast);
+
+        
+        .button-native {
+          color: var(--ion-color-success-contrast);
+          --color: white !important;
+        }
+        .button-inner {
+          --color: var(--ion-color-success-contrast);
+          color: white !important;
+        }
+        
+
+        &:after {
+          content: '';
+          position: absolute;
+          top: 2.2rem;
+          width: 0;
+          height: 0;
+          border-left: 5px solid transparent;
+          border-right: 5px solid transparent;
+          border-bottom: 0.8rem solid white;
+        }
+      }
+    }
+  }
+}
