@@ -17,7 +17,7 @@
   font-family: 'Roboto', sans-serif;
   .app-header__title {
 
-    font-size: 2rem;
+    font-size: 1.5rem;
     text-align: center;
     font-stretch: condensed;
     color: var(--header-color);
@@ -31,4 +31,20 @@
     width: 56px;
   }
   
+}
+
+@media screen and (max-width: 360px) {
+  .app-header {
+    .app-header__title {
+      font-size: 1.2rem;
+    }
+  }
+}
+
+.app-menu__popover {
+  .popover-content {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+  }
 }
