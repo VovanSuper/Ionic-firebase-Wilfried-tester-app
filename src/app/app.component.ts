@@ -33,12 +33,12 @@ export class AppComponent {
       icon: 'menu'
     },
     {
-      title: 'Outbox',
+      title: 'Imprint',
       url: '/tabs/tab2',
       icon: 'paper-plane'
     },
     {
-      title: 'Favorites',
+      title: 'Data Privacy',
       url: '/tabs/tab3',
       icon: 'person-circle'
     },
