@@ -10,7 +10,7 @@ import { IonMenu } from '@ionic/angular';
 export class HeaderComponent implements OnInit {
   @Input('title') title = 'Accelerated Learning';
   @Input('menu') menu: IonMenu = null;
-
+  logoUrl = 'https://res.cloudinary.com/iicamp/image/upload/v1582385127/svg-logo_qemciz.svg';
   constructor(private menuSvc: MenuService) { }
 
   ngOnInit() { }
