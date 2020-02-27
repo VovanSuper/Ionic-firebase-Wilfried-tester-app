@@ -15,13 +15,20 @@
 
 .app-header {
   font-family: 'Roboto', sans-serif;
-  font-size: 1.5rem;
-  font-stretch: condensed;
-  color: var(--header-color);
+  .app-header__title {
+
+    font-size: 2rem;
+    text-align: center;
+    font-stretch: condensed;
+    color: var(--header-color);
+  }
   
   .menu-icon__img {
     --height: 100px;
-    height: 56px;
+    height: 40px;
     margin: 10px;
+    border-right: 1px solid #ccc;
+    width: 56px;
   }
+  
 }
