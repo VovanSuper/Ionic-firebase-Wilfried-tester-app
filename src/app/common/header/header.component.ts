@@ -8,7 +8,7 @@ import { IonMenu } from '@ionic/angular';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
-  @Input('title') title = '';
+  @Input('title') title = 'Accelerated Learning';
   @Input('menu') menu: IonMenu = null;
 
   constructor(private menuSvc: MenuService) { }

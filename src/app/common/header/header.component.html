@@ -1,10 +1,10 @@
-<ion-header [translucent]="true">
+<ion-header class="app-header" [translucent]="true">
   <ion-toolbar>
     <ion-img class="menu-icon__img" [src]="'assets/App_logo.svg'" slot="start"></ion-img>
     <ion-title>{{ title }}</ion-title>
     <ion-buttons slot="end">
       <!-- <ion-menu-button></ion-menu-button> -->
-      <ion-button (click)="toggleMenu()"> Menu
+      <ion-button (click)="toggleMenu()">
         <ion-icon name="ellipsis-vertical"></ion-icon>
       </ion-button>
 
