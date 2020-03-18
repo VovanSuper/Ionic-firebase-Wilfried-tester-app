@@ -1,0 +1,18 @@
+ion-content ion-toolbar {
+  --background: translucent;
+}
+
+.marginTop {
+  margin-top: 50px;
+
+  &.box {
+    font-size: 25px;
+    color: #fff;
+    padding: 25px;
+    background-color: #4197b2;
+  }
+}
+
+.IconSize {
+  font-size: 60px;
+}

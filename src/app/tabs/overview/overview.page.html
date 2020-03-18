@@ -1,0 +1,21 @@
+<app-header title="Accelerated Learning"></app-header>
+
+<ion-content [fullscreen]="true">
+  <app-content-container name="Overview">
+    <div class="container">
+      <ion-text>
+        <h3 class="overview-h3">{{overviewTextContent.subtitle}}</h3>
+      </ion-text>
+      <br />
+      <ion-label>
+        <h2 class="overview-h2">{{overviewTextContent.title}}</h2>
+      </ion-label>
+      <br />
+      <ion-text>
+        <p class="overview-text">{{overviewTextContent.description}}</p>
+      </ion-text>
+
+      <accord-simple-accordion [accordionList]="accordItems" [accordionStyling]="accordStyling"></accord-simple-accordion>
+    </div>
+  </app-content-container>
+</ion-content>

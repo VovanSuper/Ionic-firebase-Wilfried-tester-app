@@ -1,19 +1,27 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:400,700,900&display=swap');
+@use './variables.scss';
 
-// .popover-menu {
-//   position: absolute;
-//   top: 2rem;
-//   right: .5rem;
-//   background-color: #808080;
- // display: flex;
- // flex-direction: column;
-  
-// }
-.app-header { 
-  --header-color: #424242;
+body {
+  font-family: var(--ion-font-family);
+  --font-family: var(--ion-font-family);
+  font-size:15px;
+  font-weight:700;
+  letter-spacing:0.45px;
+  text-size-adjust: none;
+  margin: 0;
+  padding: 0;
+  text-rendering: optimizeLegibility;
+  overflow: hidden;
+  touch-action: manipulation;
 }
 
-.app-header {
+app-tests, app-overview,app-syllabus {
+  .container {
+    padding: 1rem !important;
+  }
+}
+
+.app-header { 
+  --header-color: #424242;
   font-family: 'Roboto', sans-serif;
   .app-header__title {
 
@@ -25,7 +33,7 @@
   
   .menu-icon__img {
     --height: 100px;
-    height: 40px;
+    height: 30px;
     margin: 10px;
     border-right: 1px solid #ccc;
     width: 56px;
@@ -41,62 +49,62 @@
   }
 }
 
-.app-menu__popover {
-  .popover-content {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-  }
-}
+// .app-menu__popover {
+//   .popover-content {
+//     position: absolute;
+//     top: 1rem;
+//     right: 1rem;
+//   }
+// }
 
 
-app-tabs {
-  ion-tab-bar {
-    ion-tab-button {
-      max-width: 10rem;
-      max-height: 2.5rem;
-      margin: 10px;
-      border-top-left-radius:  .5rem;
-      border-top-right-radius: .5rem;
-      --color: white;
-      --width: 1rem;
-      --background: #a0bbc5;
+// app-tabs {
+//   ion-tab-bar {
+//     ion-tab-button {
+//       max-width: 10rem;
+//       max-height: 2.5rem;
+//       margin: 10px;
+//       border-top-left-radius:  .5rem;
+//       border-top-right-radius: .5rem;
+//       --color: white;
+//       --width: 1rem;
+//       --background: #a0bbc5;
 
-      .button-native {
-        color: white !important;
-        --color: white !important;
-      }
-      .button-inner {
-        --color: white !important;
-        color: white !important;
-      }
+//       .button-native {
+//         color: white !important;
+//         --color: white !important;
+//       }
+//       .button-inner {
+//         --color: white !important;
+//         color: white !important;
+//       }
 
-      &.tab-selected {
-        --background: #63657a;
-        --color: var(--ion-color-success-contrast);
+//       &.tab-selected {
+//         --background: #63657a;
+//         --color: var(--ion-color-success-contrast);
 
         
-        .button-native {
-          color: var(--ion-color-success-contrast);
-          --color: white !important;
-        }
-        .button-inner {
-          --color: var(--ion-color-success-contrast);
-          color: white !important;
-        }
+//         .button-native {
+//           color: var(--ion-color-success-contrast);
+//           --color: white !important;
+//         }
+//         .button-inner {
+//           --color: var(--ion-color-success-contrast);
+//           color: white !important;
+//         }
         
 
-        &:after {
-          content: '';
-          position: absolute;
-          top: 2.2rem;
-          width: 0;
-          height: 0;
-          border-left: 5px solid transparent;
-          border-right: 5px solid transparent;
-          border-bottom: 0.8rem solid white;
-        }
-      }
-    }
-  }
-}
+//         &:after {
+//           content: '';
+//           position: absolute;
+//           top: 2.2rem;
+//           width: 0;
+//           height: 0;
+//           border-left: 5px solid transparent;
+//           border-right: 5px solid transparent;
+//           border-bottom: 0.8rem solid white;
+//         }
+//       }
+//     }
+//   }
+// }

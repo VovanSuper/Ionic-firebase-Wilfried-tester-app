@@ -8,15 +8,17 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CommonsModule } from 'src/app/common/common.module';
+import { CommonsModule } from 'src/app/shared/common/common.module';
+import { AccordionModule } from '@ngx-dummy/accordion-simple';
 
 @NgModule({
   declarations: [AppComponent],
   imports: [
     BrowserModule,
     IonicModule.forRoot(),
+    CommonsModule,
+    AccordionModule,
     AppRoutingModule,
-    CommonsModule
   ],
   providers: [
     StatusBar,

@@ -1,5 +1,25 @@
 
 ion-tab-button {
-  --color: var(--ion-color-success-contrast);
-  color: white !important;
+  font-weight: 700;
+  font-size: 15px;
+
+  ion-label {
+    font-family:Roboto, "Helvetica Neue", sans-serif;
+    font-size:15px;
+    font-weight:700;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  &.tab-selected {
+    .icon-inner {
+      fill: var(--ion-icon-primary);;
+      --color: var(--ion-icon-primary);;
+
+      svg {
+        fill: var(--ion-icon-primary);;
+        --color: var(--ion-icon-primary);
+      }
+    }
+  }
+  
 }
