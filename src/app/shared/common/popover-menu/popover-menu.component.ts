@@ -1,6 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Type } from '@angular/core';
 import { Router } from '@angular/router';
-import { PopoverController } from "@ionic/angular";
+import { PopoverController, ModalController } from "@ionic/angular";
+import { ModalService } from '../../providers/modal.service';
+import { AboutModalComponent } from 'src/app/about-modal/about-modal.component';
+import { ImprintModalComponent } from 'src/app/imprint-modal/imprint-modal.component';
+import { DataPrivacyModalComponent } from 'src/app/data-privacy-modal/data-privacy-modal.component';
 
 @Component({
   selector: 'app-popover-menu',
@@ -13,35 +17,37 @@ export class PopoverMenuComponent implements OnInit {
   appPages = {
     About: {
       title: 'About',
-      url: '/tabs/overview',
+      component: AboutModalComponent,
       icon: 'menu'
     },
     Imprint: {
       title: 'Imprint',
-      url: '/tabs/syllabus',
+      component: ImprintModalComponent,
       icon: 'paper-plane'
     },
     DataPrivacy: {
       title: 'Data Privacy',
-      url: '/tabs/tests',
+      component: DataPrivacyModalComponent,
       icon: 'person-circle'
     }
   };
 
   get Pages() {
-    return Object.values(this.appPages).map(({ title, icon = null, url = null }: { title: string, icon: string | null, url: string | null }) => { return { title, icon, url }; });
+    return Object.values(this.appPages).map(({ title, icon = null, component = null }: { title: string, icon: string | null, component: Type<any> | any; }) => { return { title, icon, component }; });
   }
 
   get PagesCount() {
     return this.Pages.length - 1;
   }
 
-  constructor(private router: Router, private popover: PopoverController) { }
+  constructor(private router: Router, private popover: PopoverController, private modalSvc: ModalService) { }
 
   ngOnInit() { }
 
-  goto(path = this.appPages.About.url) {
-    this.router.navigateByUrl(path);
+  goto(page = this.appPages.About) {
+    // this.router.navigateByUrl(path);
+    const { title } = page;
+    this.modalSvc.createModal({ component: page.component, componentProps: { title } });
     this.popover.dismiss();
   }
 

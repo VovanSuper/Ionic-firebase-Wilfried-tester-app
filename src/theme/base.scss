@@ -14,7 +14,13 @@ body {
   touch-action: manipulation;
 }
 
-app-tests, app-overview,app-syllabus {
+app-tests,
+app-overview,
+app-syllabus,
+app-about-modal,
+app-imprint-modal,
+app-data-privacy-modal
+{
   .container {
     padding: 1rem !important;
   }
