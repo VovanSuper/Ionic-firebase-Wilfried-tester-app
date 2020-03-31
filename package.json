@@ -68,7 +68,7 @@
     "@ionic/angular-toolkit": "^2.2.0",
     "@types/jasmine": "^3.5.9",
     "@types/jasminewd2": "^2.0.8",
-    "@types/node": "^13.9.2",
+    "@types/node": "^13.9.8",
     "codelyzer": "^5.2.1",
     "firebase-tools": "^7.15.1",
     "jasmine-core": "^3.5.0",
