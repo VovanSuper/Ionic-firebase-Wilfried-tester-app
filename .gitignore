@@ -360,3 +360,5 @@ MigrationBackup/
 /platforms
 /plugins
 /www
+/android
+/ios
